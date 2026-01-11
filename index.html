@@ -1,0 +1,1320 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maison Auto Conciergerie Lyon - Service Automobile Premium</title>
+<meta name="description" content="Service conciergerie automobile premium à Lyon. Gestion complète de votre véhicule, detailing professionnel, convoyage sécurisé. Interventions à domicile 7j/7.">
+<meta name="keywords" content="conciergerie auto Lyon, detailing Lyon, nettoyage auto, service auto Lyon, entretien voiture Lyon">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+:root { 
+    --gold: #D4AF37; 
+    --dark-gold: #8B6B0D;
+    --black: #0A0A0A; 
+    --dark-gray: #1A1A1A; 
+    --white: #FFFFFF;
+    --transition: all 0.3s ease;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Montserrat', sans-serif; background: var(--black); color: var(--white); line-height: 1.6; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+/* Header */
+header { 
+    position: fixed; 
+    width: 100%; 
+    background: rgba(10,10,10,0.98); 
+    padding: 20px 0; 
+    z-index: 1000; 
+    border-bottom: 1px solid rgba(212,175,55,0.2);
+    backdrop-filter: blur(10px);
+}
+.nav-container { 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    gap: 30px;
+}
+.logo { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.8rem; 
+    color: var(--gold); 
+    text-decoration: none; 
+    font-weight: 700; 
+    white-space: nowrap;
+}
+.logo span { 
+    display: block; 
+    font-size: 0.9rem; 
+    font-weight: 300; 
+    color: rgba(255,255,255,0.8); 
+    margin-top: 2px;
+}
+.mobile-menu-btn { 
+    display: none; 
+    background: none; 
+    border: none; 
+    color: var(--gold); 
+    font-size: 1.5rem; 
+    cursor: pointer; 
+    padding: 5px;
+}
+nav ul { 
+    display: flex; 
+    list-style: none; 
+    gap: 30px; 
+    align-items: center;
+}
+nav a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-weight: 500; 
+    transition: var(--transition); 
+    font-size: 0.95rem;
+}
+nav a:hover { color: var(--gold); }
+
+/* WhatsApp Header Button */
+.whatsapp-header-btn {
+    background: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: var(--transition);
+}
+.whatsapp-header-btn:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+/* Hero Section */
+.hero { 
+    min-height: 100vh; 
+    background: linear-gradient(rgba(10,10,10,0.92), rgba(10,10,10,0.85)), 
+                url('https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&auto=format&fit=crop&w=2000&q=80') center/cover;
+    display: flex; 
+    align-items: center; 
+    text-align: center; 
+    padding-top: 100px;
+}
+.hero-content { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+.hero h1 { 
+    font-size: clamp(2.5rem, 5vw, 3.8rem); 
+    margin-bottom: 20px; 
+    color: var(--gold); 
+    font-family: 'Playfair Display', serif;
+    line-height: 1.2;
+}
+.hero-subtitle { 
+    font-size: clamp(1.1rem, 2vw, 1.4rem); 
+    margin-bottom: 40px; 
+    opacity: 0.9;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.cta-button { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold)); 
+    color: var(--black); 
+    padding: 16px 35px; 
+    border-radius: 30px; 
+    text-decoration: none; 
+    font-weight: 700; 
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    min-width: 200px;
+    text-align: center;
+}
+.cta-button:hover { 
+    transform: translateY(-3px); 
+    box-shadow: 0 10px 20px rgba(212,175,55,0.3);
+}
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366, #128C7E);
+}
+
+/* Sections */
+section { padding: 100px 0; }
+.section-title { 
+    text-align: center; 
+    font-size: clamp(2rem, 4vw, 2.8rem); 
+    color: var(--gold); 
+    margin-bottom: 50px; 
+    font-family: 'Playfair Display', serif;
+    position: relative;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+}
+
+/* Services Section */
+.services-section { background: var(--dark-gray); }
+.services-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+.services-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 30px; 
+    margin-top: 40px;
+}
+.service-card { 
+    background: var(--black); 
+    border-radius: 15px; 
+    overflow: hidden; 
+    transition: var(--transition);
+    border: 1px solid rgba(212,175,55,0.1);
+    position: relative;
+    height: 100%;
+}
+.service-card:hover { 
+    transform: translateY(-10px); 
+    border-color: var(--gold); 
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+.service-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: var(--gold);
+    color: var(--black);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    z-index: 1;
+}
+.service-header { 
+    padding: 40px 30px 30px; 
+    text-align: center; 
+    background: linear-gradient(135deg, rgba(212,175,55,0.1), transparent);
+    position: relative;
+}
+.service-icon { 
+    font-size: 3rem; 
+    color: var(--gold); 
+    margin-bottom: 20px;
+    transition: var(--transition);
+}
+.service-card:hover .service-icon {
+    transform: scale(1.1);
+}
+.service-title { 
+    font-size: 1.6rem; 
+    color: var(--gold); 
+    margin-bottom: 15px;
+    font-family: 'Playfair Display', serif;
+}
+.service-body { padding: 0 30px 40px; }
+.service-description {
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+.service-features { 
+    list-style: none; 
+    margin: 25px 0;
+}
+.service-features li { 
+    margin-bottom: 12px; 
+    padding-left: 30px; 
+    position: relative;
+    opacity: 0.9;
+}
+.service-features li::before { 
+    content: '✓'; 
+    color: var(--gold); 
+    position: absolute; 
+    left: 0; 
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+.service-details { 
+    background: rgba(212,175,55,0.05); 
+    padding: 20px; 
+    border-radius: 10px; 
+    margin: 25px 0;
+    border-left: 3px solid var(--gold);
+}
+.detail-item { 
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px 0; 
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    font-size: 0.95rem;
+}
+.detail-item:last-child { border-bottom: none; }
+.service-price { 
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold)); 
+    color: var(--black); 
+    padding: 15px 30px; 
+    border-radius: 25px; 
+    font-weight: 700; 
+    text-align: center;
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+/* Nettoyage Options */
+.cleaning-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}
+.cleaning-option {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid rgba(212,175,55,0.2);
+}
+.cleaning-option i {
+    color: var(--gold);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.cleaning-option h4 {
+    color: var(--gold);
+    margin-bottom: 5px;
+}
+.partner-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(212,175,55,0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    margin: 15px 0;
+    font-size: 0.9rem;
+}
+.partner-badge i {
+    color: var(--gold);
+}
+
+/* Process Section */
+.process-section { background: var(--black); }
+.process-steps { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 30px; 
+    margin-top: 50px;
+}
+.step { 
+    text-align: center; 
+    padding: 40px 25px;
+    background: var(--dark-gray);
+    border-radius: 15px;
+    transition: var(--transition);
+    border: 1px solid rgba(212,175,55,0.1);
+}
+.step:hover {
+    border-color: var(--gold);
+    transform: translateY(-5px);
+}
+.step-number { 
+    width: 70px; 
+    height: 70px; 
+    background: linear-gradient(135deg, var(--gold), var(--dark-gold)); 
+    color: var(--black); 
+    border-radius: 50%; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.8rem; 
+    font-weight: 700; 
+    margin: 0 auto 25px;
+    font-family: 'Montserrat', sans-serif;
+}
+.step h3 { 
+    color: var(--gold); 
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+.step p { opacity: 0.9; }
+
+/* Contact Section */
+.contact-section { background: var(--dark-gray); }
+.contact-container { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 50px; 
+    margin-top: 50px;
+}
+.contact-info h3 { 
+    color: var(--gold); 
+    margin-bottom: 30px; 
+    font-size: 1.5rem;
+    font-family: 'Playfair Display', serif;
+}
+.contact-item { 
+    display: flex; 
+    align-items: flex-start; 
+    gap: 20px; 
+    margin-bottom: 30px;
+    padding: 20px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    transition: var(--transition);
+}
+.contact-item:hover {
+    background: rgba(212,175,55,0.05);
+    transform: translateX(5px);
+}
+.contact-item i { 
+    color: var(--gold); 
+    font-size: 1.3rem; 
+    margin-top: 3px;
+    min-width: 25px;
+}
+.contact-item strong {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--white);
+}
+.contact-item small {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.85rem;
+}
+.form-group { margin-bottom: 25px; }
+.form-group label { 
+    display: block; 
+    margin-bottom: 10px; 
+    color: var(--gold); 
+    font-weight: 500;
+}
+
+/* STYLES AMÉLIORÉS POUR LES MENUS DÉROULANTS */
+.form-group input, .form-group select, .form-group textarea { 
+    width: 100%; 
+    padding: 15px; 
+    background: rgba(255,255,255,0.05); 
+    border: 1px solid rgba(255,255,255,0.1); 
+    border-radius: 8px; 
+    color: var(--white); 
+    transition: var(--transition);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+/* Styles spécifiques pour les select */
+.form-group select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23D4AF37'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    background-size: 20px;
+    padding-right: 50px;
+    cursor: pointer;
+}
+
+/* Options dans le menu déroulant */
+.form-group select option {
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 1rem;
+}
+
+/* Style quand le select est ouvert */
+.form-group select:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.2);
+    background-color: rgba(255,255,255,0.08);
+}
+
+/* Style pour les options au survol */
+.form-group select option:hover,
+.form-group select option:focus {
+    background-color: rgba(212,175,55,0.2) !important;
+    color: #FFFFFF !important;
+}
+
+/* Style pour l'option sélectionnée */
+.form-group select option:checked {
+    background-color: rgba(212,175,55,0.3) !important;
+    color: #FFFFFF !important;
+    font-weight: 600;
+}
+
+/* Style pour le placeholder */
+.form-group select option[value=""] {
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 2px rgba(212,175,55,0.2);
+}
+.form-message {
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    display: none;
+}
+.form-message.success {
+    background: rgba(46, 213, 115, 0.1);
+    border: 1px solid rgba(46, 213, 115, 0.3);
+    color: #2ed573;
+    display: block;
+}
+.form-message.error {
+    background: rgba(255, 71, 87, 0.1);
+    border: 1px solid rgba(255, 71, 87, 0.3);
+    color: #ff4757;
+    display: block;
+}
+
+/* Footer */
+footer { 
+    background: var(--black); 
+    padding: 80px 0 30px; 
+    border-top: 1px solid rgba(212,175,55,0.1);
+}
+.footer-content { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    gap: 50px; 
+    margin-bottom: 50px;
+}
+.footer-logo { 
+    font-family: 'Playfair Display', serif; 
+    font-size: 1.8rem; 
+    color: var(--gold); 
+    margin-bottom: 20px;
+}
+.footer-about p { 
+    margin-bottom: 20px; 
+    opacity: 0.8;
+}
+.footer-links h4, .footer-contact h4 { 
+    color: var(--gold); 
+    margin-bottom: 25px; 
+    font-size: 1.2rem;
+    font-family: 'Playfair Display', serif;
+}
+.footer-links ul { list-style: none; }
+.footer-links li { margin-bottom: 12px; }
+.footer-links a { 
+    color: rgba(255,255,255,0.8); 
+    text-decoration: none; 
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+.footer-links a:hover { 
+    color: var(--gold); 
+    padding-left: 5px;
+}
+address p { 
+    margin-bottom: 10px; 
+    opacity: 0.8;
+}
+address strong { 
+    color: var(--gold); 
+    display: block; 
+    margin-bottom: 10px;
+}
+.social-links { 
+    display: flex; 
+    gap: 15px; 
+    margin-top: 25px;
+}
+.social-links a { 
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: center; 
+    width: 40px; 
+    height: 40px; 
+    background: var(--dark-gray); 
+    color: var(--white); 
+    border-radius: 50%; 
+    font-size: 1.1rem; 
+    transition: var(--transition);
+    text-decoration: none;
+}
+.social-links a:hover { 
+    background: var(--gold); 
+    color: var(--black); 
+    transform: translateY(-3px);
+}
+.copyright { 
+    text-align: center; 
+    padding-top: 30px; 
+    border-top: 1px solid rgba(255,255,255,0.1); 
+    color: rgba(255,255,255,0.6);
+    font-size: 0.9rem;
+}
+.legal-links { 
+    display: flex; 
+    justify-content: center; 
+    gap: 25px; 
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+.legal-links a { 
+    color: rgba(255,255,255,0.6); 
+    text-decoration: none; 
+    transition: var(--transition);
+    font-size: 0.85rem;
+}
+.legal-links a:hover { color: var(--gold); }
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #25D366, #128C7E);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    text-decoration: none;
+    box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+    z-index: 999;
+    transition: var(--transition);
+}
+.whatsapp-float:hover {
+    transform: translateY(-5px) scale(1.1);
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn { display: block; }
+    nav ul { 
+        display: none; 
+        flex-direction: column; 
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: var(--black);
+        padding: 100px 30px 30px;
+        gap: 25px;
+        z-index: 999;
+        overflow-y: auto;
+    }
+    nav.active ul { display: flex; }
+    .whatsapp-header-btn {
+        display: none;
+    }
+    .hero h1 { font-size: 2.2rem; }
+    .hero-subtitle { font-size: 1.1rem; }
+    section { padding: 70px 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .process-steps { grid-template-columns: 1fr; }
+    .footer-content { grid-template-columns: 1fr; }
+    .legal-links { flex-direction: column; gap: 15px; }
+    .whatsapp-float {
+        bottom: 20px;
+        right: 20px;
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container { padding: 0 15px; }
+    .service-header { padding: 30px 20px 25px; }
+    .service-body { padding: 0 20px 30px; }
+    .cleaning-options { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 1.8rem; }
+    .section-title { font-size: 1.8rem; }
+}
+</style>
+</head>
+<body>
+<header id="header">
+    <div class="container nav-container">
+        <a href="#" class="logo">
+            Maison Auto Conciergerie
+            <span>Lyon</span>
+        </a>
+        
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+            <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+            <ul>
+                <li><a href="#home">Accueil</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#process">Processus</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="https://wa.me/33776624215?text=Bonjour%20Maison%20Auto%20Conciergerie%20!%20Je%20souhaiterais%20un%20devis." 
+                       target="_blank" 
+                       class="whatsapp-header-btn">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h1>Votre Conciergerie Automobile d'Excellence à Lyon</h1>
+            <div class="hero-subtitle">
+                Nous prenons soin de votre véhicule comme s'il était le nôtre. 
+                Gain de temps, expertise et service premium.
+            </div>
+            <div class="hero-buttons">
+                <a href="#contact" class="cta-button">
+                    <i class="fas fa-calendar-check"></i>
+                    Prendre rendez-vous
+                </a>
+                <a href="https://wa.me/33776624215?text=Bonjour%20Maison%20Auto%20Conciergerie%20!%20Je%20souhaiterais%20un%20devis%20personnalisé." 
+                   target="_blank" 
+                   class="cta-button whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i>
+                    Devis sur WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services" class="services-section">
+    <div class="container">
+        <h2 class="section-title">Nos Services Premium</h2>
+        <p class="services-intro">
+            Des solutions complètes et sur-mesure pour la gestion, l'entretien et le bien-être de votre véhicule. 
+            Chaque service inclut un suivi photographique détaillé.
+        </p>
+
+        <div class="services-grid">
+            <!-- Service 1 - Gestion Complète -->
+            <div class="service-card">
+                <div class="service-badge">SERVICE COMPLET</div>
+                <div class="service-header">
+                    <div class="service-icon"><i class="fas fa-car-cog"></i></div>
+                    <h3 class="service-title">Gestion Véhicule Complète</h3>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Solution tout-en-un pour la gestion administrative et technique de votre véhicule. 
+                        Nous nous occupons de tout, de la prise en charge à la restitution.
+                    </p>
+                    <ul class="service-features">
+                        <li>Prise en charge à domicile ou au bureau</li>
+                        <li>Contrôle technique avec compte-rendu détaillé</li>
+                        <li>Entretien chez nos garagistes partenaires</li>
+                        <li>Suivi photographique à chaque étape</li>
+                        <li>Gestion des réparations et démarches</li>
+                        <li>Restitution avec état des lieux complet</li>
+                    </ul>
+                    <div class="service-details">
+                        <div class="detail-item">
+                            <span>⏱️ Durée moyenne</span>
+                            <span>4-6 heures</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>📍 Zone d'intervention</span>
+                            <span>30km autour de Lyon</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>🛡️ Assurance</span>
+                            <span>All risks incluse</span>
+                        </div>
+                    </div>
+                    <div class="service-price">Sur devis personnalisé</div>
+                </div>
+            </div>
+
+            <!-- Service 2 - Nettoyage & Detailing -->
+            <div class="service-card">
+                <div class="service-badge">PARTENAIRE QUALITÉ</div>
+                <div class="service-header">
+                    <div class="service-icon"><i class="fas fa-spray-can-sparkles"></i></div>
+                    <h3 class="service-title">Nettoyage & Detailing</h3>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Nettoyage professionnel réalisé par nos partenaires experts en detailing. 
+                        Qualité garantie pour un résultat impeccable.
+                    </p>
+                    
+                    <div class="partner-badge">
+                        <i class="fas fa-handshake"></i>
+                        Service réalisé par notre partenaire detailing certifié
+                    </div>
+
+                    <div class="cleaning-options">
+                        <div class="cleaning-option">
+                            <i class="fas fa-car-side"></i>
+                            <h4>Extérieur</h4>
+                            <p>Lavage perfectionné + cire</p>
+                        </div>
+                        <div class="cleaning-option">
+                            <i class="fas fa-chair"></i>
+                            <h4>Intérieur</h4>
+                            <p>Nettoyage complet habitacle</p>
+                        </div>
+                        <div class="cleaning-option">
+                            <i class="fas fa-spa"></i>
+                            <h4>Complet</h4>
+                            <p>Intérieur + Extérieur premium</p>
+                        </div>
+                    </div>
+
+                    <ul class="service-features">
+                        <li>Lavage deux bacs (méthode safe)</li>
+                        <li>Décontamination ferreuse</li>
+                        <li>Nettoyage intérieur vapeur</li>
+                        <li>Traitement cuir/alcantara</li>
+                        <li>Revêtement céramique (option)</li>
+                        <li>Photos avant/après détaillées</li>
+                    </ul>
+                    
+                    <div class="service-details">
+                        <div class="detail-item">
+                            <span>⏱️ Durée</span>
+                            <span>3-8 heures selon option</span>
+                        </div>
+                    </div>
+                    <div class="service-price">Sur devis personnalisé</div>
+                </div>
+            </div>
+
+            <!-- Service 3 - Convoyage -->
+            <div class="service-card">
+                <div class="service-badge">SUR-MESURE</div>
+                <div class="service-header">
+                    <div class="service-icon"><i class="fas fa-truck-ramp-box"></i></div>
+                    <h3 class="service-title">Convoyage & Transport</h3>
+                </div>
+                <div class="service-body">
+                    <p class="service-description">
+                        Transport sécurisé de votre véhicule partout en France. 
+                        Service porte-à-porte avec suivi et assurance complète.
+                    </p>
+                    <ul class="service-features">
+                        <li>Transport porte-à-porte</li>
+                        <li>Protection climatique</li>
+                        <li>Assurance tous risques transport</li>
+                        <li>Photos à chaque étape du trajet</li>
+                        <li>Service VIP disponible</li>
+                    </ul>
+                    <div class="service-details">
+                        <div class="detail-item">
+                            <span>📅 Disponibilité</span>
+                            <span>7 jours sur 7</span>
+                        </div>
+                        <div class="detail-item">
+                            <span>🌍 Zone</span>
+                            <span>France & Europe</span>
+                        </div>
+                    </div>
+                    <div class="service-price">Sur devis personnalisé</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="process" class="process-section">
+    <div class="container">
+        <h2 class="section-title">Notre Processus d'Excellence</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto 50px; opacity: 0.9;">
+            Un service structuré en 4 étapes pour garantir qualité, transparence et satisfaction.
+        </p>
+        <div class="process-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Devis & Prise de RDV</h3>
+                <p>Évaluation de vos besoins par téléphone, WhatsApp ou formulaire. Devis transparent et prise de rendez-vous à votre convenance.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Prise en Charge</h3>
+                <p>Récupération de votre véhicule à l'adresse choisie. État des lieux photographique détaillé et mise en sécurité immédiate.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Exécution & Suivi</h3>
+                <p>Réalisation des prestations par nos soins ou nos partenaires. Suivi en temps réel avec photos régulières de l'avancement.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">4</div>
+                <h3>Livraison & Satisfaction</h3>
+                <p>Restitution de votre véhicule parfaitement entretenu. Rapport complet avec photos et garanties sur les prestations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <h2 class="section-title">Contact & Devis Gratuit</h2>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h3>Contactez-nous directement</h3>
+                
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <div>
+                        <strong>Téléphone Direct</strong>
+                        <p>07 76 62 42 15</p>
+                        <small>Appel gratuit - Réponse immédiate</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <strong>WhatsApp Business</strong>
+                        <p>07 76 62 42 15</p>
+                        <small>Devis instantané - Réponse sous 10 min</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <strong>Email Professionnel</strong>
+                        <p>maisonautoconciergerie@gmail.com</p>
+                        <small>Réponse garantie sous 24h</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div>
+                        <strong>Zone d'Intervention</strong>
+                        <p>Lyon et 30km alentour</p>
+                        <small>Déplacements gratuits dans la zone</small>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <strong>Horaires d'Ouverture</strong>
+                        <p>Lundi - Samedi : 8h00 - 20h00</p>
+                        <small>Services d'urgence 7j/7 sur demande</small>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 40px;">
+                    <a href="tel:+33776624215" class="cta-button" style="margin-bottom: 15px; display: block; text-align: center;">
+                        <i class="fas fa-phone"></i>
+                        Appeler maintenant
+                    </a>
+                    <a href="https://wa.me/33776624215?text=Bonjour%20!%20Je%20souhaite%20un%20devis%20pour%20mon%20véhicule." 
+                       target="_blank" 
+                       class="cta-button whatsapp-btn" 
+                       style="display: block; text-align: center;">
+                        <i class="fab fa-whatsapp"></i>
+                        WhatsApp instantané
+                    </a>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Demande de Devis en Ligne</h3>
+                <div id="formMessage" class="form-message"></div>
+                <form id="reservationForm">
+                    <div class="form-group">
+                        <label for="name">Nom & Prénom *</label>
+                        <input type="text" id="name" name="name" required placeholder="Votre nom complet">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Téléphone *</label>
+                        <input type="tel" id="phone" name="phone" required placeholder="07 76 62 42 15">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Service souhaité *</label>
+                        <select id="service" name="service" required>
+                            <option value="">-- Choisissez un service --</option>
+                            <option value="gestion">Gestion Véhicule Complète</option>
+                            <option value="nettoyage_ext">Nettoyage Extérieur</option>
+                            <option value="nettoyage_int">Nettoyage Intérieur</option>
+                            <option value="nettoyage_complet">Nettoyage Complet</option>
+                            <option value="convoyage">Convoyage & Transport</option>
+                            <option value="autre">Autre demande</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicle">Véhicule (Marque/Modèle/Année) *</label>
+                        <input type="text" id="vehicle" name="vehicle" required placeholder="Ex: Audi A4 - 2020">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Détails de votre demande</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Adresse de prise en charge, besoins spécifiques, contraintes horaires..."></textarea>
+                    </div>
+                    
+                    <div style="margin: 25px 0;">
+                        <label style="display: flex; align-items: flex-start; gap: 10px; cursor: pointer; font-size: 0.9rem;">
+                            <input type="checkbox" id="consent" name="consent" required style="margin-top: 3px;">
+                            <span>J'accepte que mes données soient utilisées pour établir mon devis et me recontacter.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="cta-button" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i>
+                        Envoyer ma demande de devis
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-about">
+                <div class="footer-logo">Maison Auto Conciergerie</div>
+                <p>Service conciergerie automobile premium à Lyon. Excellence, discrétion et fiabilité pour vos véhicules.</p>
+                <p style="margin-top: 15px; font-style: italic; color: var(--gold);">
+                    "La tranquillité commence quand nous prenons le volant."
+                </p>
+                <div class="social-links">
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="#services">Gestion Véhicule Complète</a></li>
+                    <li><a href="#services">Nettoyage & Detailing</a></li>
+                    <li><a href="#services">Convoyage & Transport</a></li>
+                    <li><a href="#contact">Devis Gratuit</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contact Rapide</h4>
+                <address>
+                    <p><strong>Maison Auto Conciergerie</strong></p>
+                    <p>Service sur Lyon et région</p>
+                    <p><strong>📞 Téléphone :</strong> 07 76 62 42 15</p>
+                    <p><strong>📱 WhatsApp :</strong> 07 76 62 42 15</p>
+                    <p><strong>✉️ Email :</strong> maisonautoconciergerie@gmail.com</p>
+                    <p><strong>⏰ Horaires :</strong> Lun-Sam 8h-20h</p>
+                </address>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2024 Maison Auto Conciergerie - Service professionnel automobile - Lyon</p>
+            <div class="legal-links">
+                <a href="#">Mentions légales</a>
+                <a href="#">Politique de confidentialité</a>
+                <a href="#">CGV</a>
+                <a href="#">Cookies</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/33776624215?text=Bonjour%20Maison%20Auto%20Conciergerie%20!%20Je%20souhaite%20un%20devis." 
+   target="_blank" 
+   class="whatsapp-float" 
+   aria-label="Contact WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- JavaScript avec EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    // === CONFIGURATION EMAILJS ===
+    emailjs.init({
+        publicKey: "F2wz9bGs818CipSu0",
+        blockHeadless: true,
+        blockList: [],
+        limitRate: {
+            throttle: 10000,
+        },
+    });
+    
+    // === GESTION DU MENU MOBILE ===
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mainNav = document.getElementById('mainNav');
+    
+    if (mobileMenuBtn && mainNav) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+            mobileMenuBtn.innerHTML = mainNav.classList.contains('active') 
+                ? '<i class="fas fa-times"></i>' 
+                : '<i class="fas fa-bars"></i>';
+        });
+    }
+    
+    // === EFFET HEADER AU SCROLL ===
+    window.addEventListener('scroll', () => {
+        const header = document.getElementById('header');
+        if (header) {
+            if (window.scrollY > 50) {
+                header.style.background = 'rgba(10,10,10,0.98)';
+                header.style.boxShadow = '0 5px 20px rgba(0,0,0,0.3)';
+            } else {
+                header.style.background = 'rgba(10,10,10,0.95)';
+                header.style.boxShadow = 'none';
+            }
+        }
+    });
+    
+    // === FORMULAIRE DE DEVIS ===
+    const reservationForm = document.getElementById('reservationForm');
+    
+    if (reservationForm) {
+        reservationForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            event.stopPropagation();
+            
+            const formMessage = document.getElementById('formMessage');
+            if (formMessage) {
+                formMessage.className = 'form-message';
+                formMessage.textContent = '';
+            }
+            
+            // Validation des champs requis
+            let isValid = true;
+            const requiredFields = this.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!field.value.trim()) {
+                    isValid = false;
+                    field.style.borderColor = '#ff4757';
+                    field.style.borderWidth = '2px';
+                } else {
+                    field.style.borderColor = '';
+                    field.style.borderWidth = '';
+                }
+            });
+            
+            // VALIDATION CORRIGÉE DU TÉLÉPHONE
+            const phoneField = document.getElementById('phone');
+            if (phoneField && phoneField.value) {
+                // Nettoyer le numéro : enlever espaces, tirets, points, etc.
+                const phoneValue = phoneField.value.replace(/[\s\-\.\(\)]/g, '');
+                
+                // Accepter plusieurs formats :
+                // - 10 chiffres (ex: 0776624215)
+                // - +33 suivi de 9 chiffres (ex: +33776624215)
+                // - 33 suivi de 9 chiffres (ex: 33776624215)
+                const phoneRegex = /^(?:(?:\+|00)33|0)[1-9](\d{2}){4}$/;
+                
+                if (!phoneRegex.test(phoneValue)) {
+                    isValid = false;
+                    phoneField.style.borderColor = '#ff4757';
+                    phoneField.style.borderWidth = '2px';
+                    
+                    if (formMessage) {
+                        formMessage.textContent = '⚠️ Veuillez entrer un numéro de téléphone français valide (ex: 07 76 62 42 15)';
+                        formMessage.classList.add('error');
+                    }
+                }
+            }
+            
+            if (!isValid) {
+                if (formMessage && !formMessage.textContent.includes('téléphone')) {
+                    formMessage.textContent = '⚠️ Veuillez remplir tous les champs obligatoires (*) correctement.';
+                    formMessage.classList.add('error');
+                }
+                return;
+            }
+            
+            // Désactivation du bouton pendant l'envoi
+            const submitBtn = this.querySelector('button[type="submit"]');
+            if (!submitBtn) return;
+            
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            // === ENVOI AVEC EMAILJS ===
+            console.log('Tentative d\'envoi avec EmailJS...');
+            
+            emailjs.sendForm('service_xra4hbl', 'template_f87wepi', this)
+                .then((response) => {
+                    console.log('SUCCÈS EmailJS:', response);
+                    
+                    if (formMessage) {
+                        formMessage.textContent = '✅ Votre demande de devis a été envoyée avec succès ! Nous vous contacterons dans les plus brefs délais.';
+                        formMessage.classList.add('success');
+                    }
+                    
+                    // Réinitialisation du formulaire
+                    this.reset();
+                    
+                    // Redirection douce vers le haut après 2 secondes
+                    setTimeout(() => {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    }, 2000);
+                    
+                }, (error) => {
+                    // Erreur
+                    console.error('ERREUR EmailJS:', error);
+                    
+                    if (formMessage) {
+                        formMessage.textContent = '❌ Une erreur est survenue. Veuillez nous contacter directement au 07 76 62 42 15.';
+                        formMessage.classList.add('error');
+                    }
+                })
+                .finally(() => {
+                    // Réactivation du bouton
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    
+                    // Scroll vers le message
+                    if (formMessage) {
+                        formMessage.scrollIntoView({ 
+                            behavior: 'smooth', 
+                            block: 'center' 
+                        });
+                    }
+                });
+        });
+    } else {
+        console.error('Formulaire introuvable: #reservationForm');
+    }
+    
+    // === FORMATAGE AUTO DU TÉLÉPHONE ===
+    const phoneInput = document.getElementById('phone');
+    if (phoneInput) {
+        phoneInput.addEventListener('input', function(event) {
+            let value = event.target.value.replace(/\D/g, '');
+            if (value.length > 2) {
+                value = value.replace(/(\d{2})(\d{2})(\d{2})(\d{2})(\d{2})/, '$1 $2 $3 $4 $5');
+            }
+            event.target.value = value;
+        });
+    }
+    
+    // === SCROLL DOUX POUR LES ANCRES ===
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href');
+            if (targetId === '#') return;
+            
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+                // Fermeture menu mobile si ouvert
+                if (mainNav && mainNav.classList.contains('active')) {
+                    mainNav.classList.remove('active');
+                    if (mobileMenuBtn) {
+                        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                }
+                
+                const header = document.getElementById('header');
+                const headerHeight = header ? header.offsetHeight : 0;
+                const targetPosition = targetElement.offsetTop - headerHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // === FERMETURE MENU MOBILE AU CLIC EXTÉRIEUR ===
+    document.addEventListener('click', (event) => {
+        if (mainNav && mobileMenuBtn) {
+            if (!mainNav.contains(event.target) && !mobileMenuBtn.contains(event.target)) {
+                mainNav.classList.remove('active');
+                mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+            }
+        }
+    });
+    
+    // === RENDU TÉLÉPHONE CLIQUABLE SUR MOBILE ===
+    if ('ontouchstart' in window) {
+        setTimeout(() => {
+            const elements = document.querySelectorAll('body *');
+            elements.forEach(el => {
+                if (el.textContent && el.textContent.includes('07 76 62 42 15')) {
+                    el.innerHTML = el.innerHTML.replace(
+                        /07 76 62 42 15/g, 
+                        '<a href="tel:+33776624215" style="color: inherit; text-decoration: none; font-weight: 600;">07 76 62 42 15</a>'
+                    );
+                }
+            });
+        }, 1000);
+    }
+    
+    console.log('Site Maison Auto Conciergerie chargé avec EmailJS configuré');
+</script>
+</body>
+</html>
